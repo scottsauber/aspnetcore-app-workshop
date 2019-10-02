@@ -6,10 +6,10 @@ namespace ConferenceDTO
 {
     public class ConferenceResponse : ConferenceDto
     {
-        public ICollection<Session> Sessions { get; set; } = new List<Session>();
+        public ICollection<SessionDto> Sessions { get; set; } = new List<SessionDto>();
 
-        public ICollection<Track> Tracks { get; set; } = new List<Track>();
+        public ICollection<TrackDto> Tracks { get; set; } = new List<TrackDto>();
 
-        public ICollection<Speaker> Speakers { get; set; } = new List<Speaker>();
+        public ICollection<SpeakerDto> Speakers { get; set; } = new List<SpeakerDto>();
     }
 }

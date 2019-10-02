@@ -6,8 +6,8 @@ namespace ConferenceDTO
 {
     public class AttendeeResponse : AttendeeDto
     {
-        public ICollection<Conference> Conferences { get; set; } = new List<Conference>();
+        public ICollection<ConferenceDto> Conferences { get; set; } = new List<ConferenceDto>();
 
-        public ICollection<Session> Sessions { get; set; } = new List<Session>();
+        public ICollection<SessionDto> Sessions { get; set; } = new List<SessionDto>();
     }
 }

@@ -70,7 +70,7 @@ namespace BackEnd.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ConferenceResponse>> CreateConference(ConferenceDTO.Conference input)
+        public async Task<ActionResult<ConferenceResponse>> CreateConference(ConferenceDto input)
         {
             var conference = new Data.Conference
             {
@@ -80,7 +80,7 @@ namespace BackEnd.Controllers
             _db.Conferences.Add(conference);
             await _db.SaveChangesAsync();
 
-            var result = new ConferenceDTO.ConferenceResponse
+            var result = new ConferenceResponse
             {
                 ID = conference.ID,
                 Name = conference.Name
@@ -90,7 +90,7 @@ namespace BackEnd.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> PutConference(int id, ConferenceDTO.Conference input)
+        public async Task<IActionResult> PutConference(int id, ConferenceDto input)
         {
             var conference = await _db.FindAsync<Data.Conference>(id);
 

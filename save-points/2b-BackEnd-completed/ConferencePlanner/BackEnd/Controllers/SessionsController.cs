@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackEnd.Data;
 using ConferenceDTO;
+using BackEnd.Infrastructure;
+
 
 namespace BackEnd.Controllers
 {
@@ -54,7 +56,7 @@ namespace BackEnd.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<SessionResponse>> Post(ConferenceDTO.Session input)
+        public async Task<ActionResult<SessionResponse>> Post(SessionDto input)
         {
             var session = new Data.Session
             {
@@ -75,7 +77,7 @@ namespace BackEnd.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Put(int id, ConferenceDTO.Session input)
+        public async Task<IActionResult> Put(int id, SessionDto input)
         {
             var session = await _db.Sessions.FindAsync(id);
 

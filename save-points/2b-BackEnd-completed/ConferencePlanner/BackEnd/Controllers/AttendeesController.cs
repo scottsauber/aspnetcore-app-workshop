@@ -5,6 +5,7 @@ using BackEnd.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using BackEnd.Infrastructure;
 using ConferenceDTO;
 
 namespace BackEnd
@@ -40,7 +41,7 @@ namespace BackEnd
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
-        public async Task<ActionResult<AttendeeResponse>> Post(ConferenceDTO.Attendee input)
+        public async Task<ActionResult<AttendeeResponse>> Post(AttendeeDto input)
         {
             // Check if the attendee already exists
             var existingAttendee = await _db.Attendees

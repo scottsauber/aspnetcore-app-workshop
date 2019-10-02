@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConferenceDTO
 {
-    public class TrackResponse : Track
+    public class TrackResponse : TrackDto
     {
         public Conference Conference { get; set; }
 

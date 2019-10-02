@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConferenceDTO
 {
-    public class AttendeeResponse : Attendee
+    public class AttendeeResponse : AttendeeDto
     {
         public ICollection<Conference> Conferences { get; set; } = new List<Conference>();
 

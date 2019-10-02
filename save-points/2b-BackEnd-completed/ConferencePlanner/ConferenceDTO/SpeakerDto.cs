@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConferenceDTO
 {
-    public class Speaker
+    public class SpeakerDto
     {
         public int ID { get; set; }
 

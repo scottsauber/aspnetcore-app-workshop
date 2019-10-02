@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace ConferenceDTO
 {
-    public class Track
+    public class ConferenceDto
     {
-        public int TrackID { get; set; }
-
-        [Required]
-        public int ConferenceID { get; set; }
+        public int ID { get; set; }
 
         [Required]
         [StringLength(200)]

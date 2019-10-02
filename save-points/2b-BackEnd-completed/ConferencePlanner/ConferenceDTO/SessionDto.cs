@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ConferenceDTO
 {
-    public class Session
+    public class SessionDto
     {
         public int ID { get; set; }
 
